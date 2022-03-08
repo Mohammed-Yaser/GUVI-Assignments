@@ -1,0 +1,108 @@
+1. How to compare two JSON have the same properties without order?
+a) var obj1 = { name: "Person 1", age:5 };
+b) var obj2 = { age:5, name: "Person 1" };
+
+Answer for 1 
+//Code Starts here for question 1
+
+var obj1 = { name: "Person 1", age: 5 };
+var obj2 = { age: 5, name: "Person 1" };
+
+//function for checking two objects properties ignoring order
+const checkProperty = function (obj1, obj2) {
+  const obj1Length = Object.keys(obj1).length;
+  const obj2Length = Object.keys(obj2).length;
+
+  if (obj1Length === obj2Length) {
+    return Object.keys(obj1).every(
+      (key) => obj2.hasOwnProperty(key) && obj2[key] === obj1[key]
+    );
+  }
+  return false;
+};
+
+if (checkProperty(obj1, obj2)) {
+  console.log(`Both objects are equal and same`);
+} else {
+  console.log(`Both objects are no equal and different`);
+}
+
+Console OUTPUT : Both objects are equal and same
+
+2. Use the rest countries API url -> https://restcountries.eu/rest/v2/all and display all the country flags in console
+
+Answer for 2
+//Code Starts here for question 2
+
+const XMLHttpRequest = require("xhr2"); //XMLHttpRequest is a built-in object in web browsers, Using this line to execute it in Node.js
+const getAllCountriesInfo = new XMLHttpRequest();
+getAllCountriesInfo.open("GET", "https://restcountries.com/v2/all");
+getAllCountriesInfo.send();
+getAllCountriesInfo.onload = function () {
+  const countryData = JSON.parse(getAllCountriesInfo.response);
+  for (const country of countryData) {
+    console.log(`${country.name} : ${country.flag}`);
+  }
+};
+
+Console OUTPUT :
+Afghanistan : https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_the_Taliban.svg
+Åland Islands : https://flagcdn.com/ax.svg
+Albania : https://flagcdn.com/al.svg
+Algeria : https://flagcdn.com/dz.svg
+American Samoa : https://flagcdn.com/as.svg
+Andorra : https://flagcdn.com/ad.svg
+Angola : https://flagcdn.com/ao.svg
+Anguilla : https://flagcdn.com/ai.svg
+Antarctica : https://flagcdn.com/aq.svg
+Antigua and Barbuda : https://flagcdn.com/ag.svg
+...(other countries)
+
+3.Use the same rest countries and print all countries name, region, sub region and population
+
+Answer for 3
+//Code Starts here for question 3
+
+const XMLHttpRequest = require("xhr2"); //XMLHttpRequest is a built-in object in web browsers, Using this line to execute it in Node.js
+
+const getAllCountriesInfo = new XMLHttpRequest();
+getAllCountriesInfo.open("GET", "https://restcountries.com/v2/all");
+getAllCountriesInfo.send();
+getAllCountriesInfo.onload = function () {
+  const countryData = JSON.parse(getAllCountriesInfo.response);
+  for (const country of countryData) {
+    console.log(`
+    Country Name: ${country.name}
+    Region: ${country.region}
+    Sub Region: ${country.subregion}
+    Population: ${country.population}`);
+  }
+};
+
+Console OUTPUT :
+    Country Name: Christmas Island
+    Region: Oceania
+    Sub Region: Australia and New Zealand
+    Population: 2072
+
+    Country Name: Cocos (Keeling) Islands
+    Region: Oceania
+    Sub Region: Australia and New Zealand
+    Population: 550
+
+    Country Name: Colombia
+    Region: Americas
+    Sub Region: South America
+    Population: 50882884
+
+    Country Name: Comoros
+    Region: Africa
+    Sub Region: Eastern Africa
+    Population: 869595
+    
+    ...(other countries)
+    
+    4.https://medium.com/@reach2arunprakash/www-guvi-io-zen-d395deec1373 - PRACTICED ALL THE TASKS
+
+
+
