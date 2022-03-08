@@ -1,0 +1,79 @@
+1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+Answer for Question 1:
+
+const myResume = {
+  name: "Mohammed Yaser M R",
+  jobTtile: "Programmer",
+  email: "yasierndroid@gmail.com",
+  phone: "+91-8682866457",
+  location: {
+    address: "2/1 venkadajalapathy nagar, near post office",
+    postalCode: "605602",
+    city: "Villupuram",
+    state: "Tamil Nadu",
+    country: "India",
+  },
+  degree: "B.E. Mechatronics",
+  dob: "01-09-1998",
+  age: 23,
+  maritalStatus: "UnMarried",
+  nationality: "Indian",
+  languages: ["English", "Tamil"],
+  programmingLanguages: ["C", "C++", "Java", "JavaScript", "Python"],
+  frameworks: ["Spring", "Bootstrap"],
+  workExperienceInYears: 4,
+};
+
+//For loop
+for (let i = 0; i < Object.entries(myResume).length; i++) {
+  console.log(Object.entries(myResume)[i]);
+}
+
+//For...In Loop
+for (let objKey in myResume) {
+  console.log(`${objKey}: ${myResume[objKey]}`);
+}
+
+//For...Of Loop
+for (const entry of Object.entries(myResume)) {
+  console.log(`${entry[0]}: ${entry[1]}`);
+}
+
+//forEach Loop
+Object.entries(myResume).forEach(function (entry) {
+  console.log(`${entry[0]}: ${entry[1]}`);
+});
+
+
+2. Create your own resume data in JSON format
+
+Answer for Question 2:
+
+const myResume = {
+  name: "Mohammed Yaser M R",
+  jobTtile: "Programmer",
+  email: "yasierndroid@gmail.com",
+  phone: "+91-8682866457",
+  location: {
+    address: "2/1 venkadajalapathy nagar, near post office",
+    postalCode: "605602",
+    city: "Villupuram",
+    state: "Tamil Nadu",
+    country: "India",
+  },
+  degree: "B.E. Mechatronics",
+  dob: "01-09-1998",
+  age: 23,
+  maritalStatus: "UnMarried",
+  nationality: "Indian",
+  languages: ["English", "Tamil"],
+  programmingLanguages: ["C", "C++", "Java", "JavaScript", "Python"],
+  frameworks: ["Spring", "Bootstrap"],
+  workExperienceInYears: 4,
+};
+
+3.Read about the difference between window, screen and document in javascript - READING DONE
+
+4.Codekata practice - Completed Absolute beginner section in codekata
+
