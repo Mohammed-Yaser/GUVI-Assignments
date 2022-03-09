@@ -1,0 +1,286 @@
+1.Do the below programs in anonymous function & IIFE
+  a) Print odd numbers in an array
+  b) Convert all the strings to title caps in a string array
+  c) Sum of all numbers in an array
+  d) Return all the prime numbers in an array
+  e) Return all the palindromes in an array
+  f) Return median of two sorted arrays of the same size
+  g) Remove duplicates from an array
+  h) Rotate an array by k times
+  
+Answer for question 1 
+//Code for - a) Print odd numbers in an array 
+
+(function (array) {
+  array.forEach(function (curr) {
+    if (curr % 2 !== 0) console.log(curr);
+  });
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+console OUTPUT: 
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+1
+3
+5       
+7
+9
+
+
+
+//Code for - b) Convert all the strings to title caps in a string array
+
+(function (stringArray) {
+  stringArray.forEach(function (curr, index) {
+    stringArray[index] = `${curr.toLowerCase().slice(0, 1).toUpperCase()}${curr
+      .toLowerCase()
+      .slice(1)}`;
+  });
+  console.log(stringArray);
+})(["volvo", "audi", "ford", "mazda"]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 'Volvo', 'Audi', 'Ford', 'Mazda' ]
+
+
+
+//Code for - c) Sum of all numbers in an array
+
+(function (array) {
+  let sum = 0;
+  array.forEach(function (curr) {
+    sum += curr;
+  });
+  console.log(sum);
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+55
+
+
+
+//Code for - d) Return all the prime numbers in an array
+
+(function (array) {
+  const isPrime = (num) => {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) return false;
+    }
+    return num !== 1;
+  };
+  const filteredPrimeArray = array.filter((element) => isPrime(element));
+  console.log(filteredPrimeArray);
+  return filteredPrimeArray;
+})([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 2, 3, 5, 7 ]
+
+
+
+//Code for - e) Return all the palindromes in an array
+
+(function (array) {
+  const filteredPalindromeArray = array.filter(function (curr) {
+    //For a numerical palindrome
+    if (typeof curr === "number") {
+      if (String(curr) === String(curr).split("").reverse().join("")) {
+        return Number(curr);
+      }
+    }
+    //For palindrome strings
+    else if (typeof curr === "string") {
+      if (curr === curr.split("").reverse().join("")) {
+        return curr;
+      }
+    }
+  });
+  console.log(filteredPalindromeArray);
+  return filteredPalindromeArray;
+})([133, "civic", "mad", 9009, "rotor", "you", 101, 234, 33]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 'civic', 9009, 'rotor', 101, 33 ]
+
+
+
+//Code for - f) Return median of two sorted arrays of the same size
+
+(function (array1, array2) {
+  //Function for calculating median
+  const getMedian = function (array) {
+    const myMedian = array.length % 2 === 0 ? (array[Math.trunc((array.length - 1) / 2)] + array[Math.trunc((array.length - 1) / 2) + 1]) /2 : array[Math.trunc((array.length - 1) / 2)];
+    console.log(myMedian);
+    return myMedian;
+  };
+
+  //checking if array1 and array2 are of same length
+  if (array1.length === array2.length) {
+    const finalArray = array1.concat(array2).sort(function (a, b) {
+      return a - b;
+    });
+    //function call
+    getMedian(finalArray);
+  }
+})([1, 12, 15, 26, 38], [2, 13, 17, 30, 45]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+16
+
+
+
+//Code for - g) Remove duplicates from an array
+
+(function (array) {
+  console.log([...new Set(array)]);
+})([2, 4, 2, 5, 6, 7, 4, 7, 2, 3]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 2, 4, 5, 6, 7, 3 ]
+
+
+
+//Code for - h) Rotate an array by k times
+
+(function (array, k) {
+  let postSpin;
+  let input = array.slice();
+  for (let i = 0; i < k; i++) {
+    postSpin = input.slice(-1).concat(input.slice(0, array.length - 1));
+    input = postSpin.slice();
+  }
+  console.log(postSpin);
+})([1, 2, 3, 4, 5], 2);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 4, 5, 1, 2, 3 ]
+
+
+
+2.https://medium.com/@reach2arunprakash/guvi-zen-class-javascript-warm-up-programming-problems-15973c74b87f - PRACTICE DONE
+
+
+
+3.Do the below programs in arrow functions
+  a) Print odd numbers in an array
+  b) Convert all the strings to title caps in a string array
+  c) Sum of all numbers in an array
+  d) Return all the prime numbers in an array
+  e) Return all the palindromes in an array
+  
+Answer for question 3
+//Code for - a) Print odd numbers in an array 
+
+const printOdd = (array) => {
+  array.forEach((curr) => {
+    if (curr % 2 !== 0) console.log(curr);
+  });
+};
+printOdd([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+
+console OUTPUT: 
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+1
+3
+5       
+7
+9
+
+
+
+//Code for - b) Convert all the strings to title caps in a string array
+
+const toTitleCaps = (stringArray) => {
+  stringArray.forEach((curr, index) => {
+    stringArray[index] = `${curr.toLowerCase().slice(0, 1).toUpperCase()}${curr
+      .toLowerCase()
+      .slice(1)}`;
+  });
+  console.log(stringArray);
+};
+toTitleCaps(["volvo", "audi", "ford", "mazda"]);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 'Volvo', 'Audi', 'Ford', 'Mazda' ]
+
+
+
+//Code for - c) Sum of all numbers in an array
+
+const getSum = (array) => {
+  let sum = 0;
+  array.forEach((curr) => {
+    sum += curr;
+  });
+  return sum;
+};
+console.log(getSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+55
+
+
+
+//Code for - d) Return all the prime numbers in an array
+
+const filterPrime = (array) => {
+  const isPrime = (num) => {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) return false;
+    }
+    return num !== 1;
+  };
+  const filteredPrimeArray = array.filter((element) => isPrime(element));
+  return filteredPrimeArray;
+};
+console.log(filterPrime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 2, 3, 5, 7 ]
+
+
+
+//Code for - e) Return all the palindromes in an array
+
+const filterPalindrome = (array) => {
+  const filteredPalindromeArray = array.filter((curr) => {
+    //For a numerical palindrome
+    if (typeof curr === "number") {
+      if (String(curr) === String(curr).split("").reverse().join("")) {
+        return Number(curr);
+      }
+    }
+    //For palindrome strings
+    else if (typeof curr === "string") {
+      if (curr === curr.split("").reverse().join("")) {
+        return curr;
+      }
+    }
+  });
+  return filteredPalindromeArray;
+};
+console.log(
+  filterPalindrome([133, "civic", "mad", 9009, "rotor", "you", 101, 234, 33])
+);
+
+console OUTPUT:
+PS C:\Users\LENOVO\Yaser workspace\GUVITASKS\PracticeD2> node script.js
+[ 'civic', 9009, 'rotor', 101, 33 ]
+
+
+
+4.https://medium.com/@reach2arunprakash/www-guvi-io-zen-d395deec1373 - PRACTICE DONE
+
+
+
+
+
