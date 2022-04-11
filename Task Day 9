@@ -1,0 +1,195 @@
+1. Fix the bugs in below snippet
+Question: 
+<html lang="en">
+    <head>
+        <title>Document
+            <body>
+                guvi
+        </title>
+    </head>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div>
+            <div>
+                Guvi Geek Network
+            </div>
+        </body>
+    </html>
+    
+Answer:
+<html lang="en">
+  <head>
+      <title>Document guvi</title>
+  </head>
+<body>
+  <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <div>
+          <div>
+              Guvi Geek Network
+          </div>
+      </body>
+  </html>
+  
+  
+  
+2. Try the below one
+Question: 
+<html lang="en">
+    <head>
+        <title>Document
+            <body>
+                guvi
+        </title>
+    </head>
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        <div>
+            <div>
+                Guvi Geek Network
+            </div>
+        </body>
+    </html>
+    
+Answer:
+<html lang="en">
+  <head>
+      <title>Document guvi</title>
+  </head>
+<body>
+  <div>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      <div>
+          <div>
+              Guvi Geek Network
+          </div>
+      </body>
+  </html>
+  
+  
+  3. Design a contact us form with all fields as required.
+  Answer:
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us Form</title>
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead><h1>Contact Us</h1></thead>
+      <form>
+          <tr>
+              <td><input
+                type="text"
+                name="first name"
+                placeholder="First Name"
+                required
+              /></td>
+              <td><input
+                type="text"
+                name="last name"
+                placeholder="Last Name"
+                required
+              /></td>
+          </tr>
+          <tr><td><input type="email" name="email" placeholder="Email" required /></td></tr>
+          <tr><td><input
+            type="number"
+            name="mobile number"
+            placeholder="Mobile Number"
+            required
+          /></td></tr>
+          <tr><td><select>
+            <option value="" selected hidden disabled disabled>
+              <span style="color: #8e8e8e">Preferred contact method</span>
+            </option>
+            <option value="email">Email</option>
+            <option value="Mobile Number">Mobile Number</option>
+          </select></td></tr>
+          <tr><td><textarea
+            name="comment"
+            placeholder="Message..."
+          ></textarea></td></tr>   
+          </form>
+          </table>
+          </body>           
+</html>
+
+4.Use certain HTML elements to display the following in a HTML page.
+Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Lists</title>
+    </style>
+  </head>
+  <body> 
+   <ul>
+     <li>
+       Programming Languages
+       <ul>
+         <li>
+           Javascript
+           <ol>
+             <li type="a">Angular</li>
+             <li type="a">React</li>
+             <li type="a">Vue.js</li>
+           </ol>
+         </li>
+         <li>
+           Python
+           <ol>
+            <li type="a">Django Framework</li>
+            <li type="a">Flask Framework</li>
+          </ol>
+         </li>
+         <li>
+           Java
+           <ol>
+            <li type="a">Spring</li>
+            <li type="a">Maven</li>
+            <li type="a">Hibernate</li>
+          </ol>
+         </li>
+       </ul>
+     </li>
+     <li>
+      Database
+      <ul>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+        <li>Casandra</li>
+      </ul>
+     </li>
+   </ul>
+  </body>           
+</html>
+
+
+5.Create an element that helps you to open the https://google.com in separate new tab.
+Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Google</title>
+    </style>
+  </head>
+  <body> 
+   <a href=" https://google.com" target="_blank">Open Google</a>
+  </body>           
+</html>
+
+
+6.In the form, add two radio buttons with grouping them for employee type(Salaried and own business)
+Answer:
+
