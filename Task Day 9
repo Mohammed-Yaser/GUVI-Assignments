@@ -192,4 +192,28 @@ Answer:
 
 6.In the form, add two radio buttons with grouping them for employee type(Salaried and own business)
 Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Google</title>
+    </style>
+  </head>
+  <body> 
+   <form>
+    <p>Select the Employee Type:</p>
+      <input type="radio" id="Salaried" name="Employee type" value="Salaried">
+      <label for="Salaried">Salaried</label><br>
+      <input type="radio" id="own business" name="Employee type" value="own business">
+      <label for="own business">own business</label><br>
+   </form>
+  </body>           
+</html>
+
+
+7. Design form shown in the link (http://evc-cit.info/cit040/formguide/card_0.png)
+Answer:
+
 
