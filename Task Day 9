@@ -218,3 +218,168 @@ Answer:
 
 
 
+8. Use the table tag to design given image.
+Answer:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <div>
+        <h1 style="text-align: center">Health Chart</h1>
+        <thead>
+          <tr>
+            <th rowspan="2">State of health</th>
+            <th colspan="2">Fasting Value</th>
+            <th colspan="1">After Eating</th>
+          </tr>
+          <tr>
+            <th>Minimum</th>
+            <th>Maximum</th>
+            <th>After 2 hours eating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Healthy</td>
+            <td>70</td>
+            <td>100</td>
+            <td>Less than 140</td>
+          </tr>
+          <tr>
+            <td>Pre Diabetes</td>
+            <td>101</td>
+            <td>126</td>
+            <td>140 to 200</td>
+          </tr>
+          <tr>
+            <td>Diabetes</td>
+            <td>More than 126</td>
+            <td>N/A</td>
+            <td>More than 200</td>
+          </tr>
+        </tbody>
+      </div>
+    </table>
+  </body>
+</html>
+
+
+
+9. Write HTML input tags snippet to show default values for all Form elements
+Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input tags snippet to show default values</title>
+  </head>
+  <body>
+    <form action="">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" value="John" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+
+10. In your, HTML page add the below line and Highlight it without using any CSS. "HTML & CSS is awesome"
+Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input tags snippet to show default values</title>
+  </head>
+  <body>
+    <mark>HTML & CSS is awesome</mark>
+  </body>
+</html>
+
+
+11. Create an HTML page, which should contain all types of input elements
+Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input tags snippet to show default values</title>
+  </head>
+  <body>
+    <form>
+      <label for="EMAIL ID">Email Id:</label><br />
+      <input type="text" name="Email id" id="Email id" />
+      <br />
+      <label for="user-password">Password: </label>
+      <br />
+      <input type="password" name="user-pwd" id="user-password" />
+      <br />
+      <b>SELECT GENDER</b>
+      <br />
+      <input type="radio" name="gender" id="male" />
+      <label for="male">Male</label><br />
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+      <br />
+      <b>SELECT SUBJECTS</b>
+      <br />
+      <input type="checkbox" name="subject" id="maths" />
+      <label for="maths">Maths</label>
+      <input type="checkbox" name="subject" id="science" />
+      <label for="science">Science</label>
+      <input type="checkbox" name="subject" id="english" />
+      <label for="english">English</label>
+      <br />
+      <label for="fileselect">Upload:</label>
+      <input type="file" name="upload" id="fileselect" />
+      <br />
+      <label for="Description">Description:</label>
+      <textarea
+        rows="5"
+        cols="50"
+        name="Description"
+        id="Description"
+      ></textarea>
+      <br />
+      <label for="country">Country:</label>
+      <select name="country" id="country">
+        <option value="India">India</option>
+        <option value="Sri Lanka">Sri Lanka</option>
+        <option value="Australia">Australia</option>
+      </select>
+      <br />
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="Username" />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+  </body>
+</html>
+
+
+
