@@ -215,6 +215,108 @@ Answer:
 
 7. Design form shown in the link (http://evc-cit.info/cit040/formguide/card_0.png)
 Answer:
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Form</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <td colspan="3" style="background-color: red; color: white">
+            <h1>Yes! I want to suscribe to <i>Mag-O-Zine </i></h1>
+          </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="1.5">
+            <input type="text" name="firstname" id="firstname" />
+          </td>
+          <td colspan="1.5">
+            <input type="text" name="lastname" id="lastname" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1.5">
+            <label for="firstname">First Name</label>
+          </td>
+          <td colspan="1.5">
+            <label for="laststname">Last Name</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="3"><input type="text" name="address" id="address" /></td>
+        </tr>
+        <tr>
+          <td colspan="3"><label for="address">Address</label></td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <input type="text" name="city" id="city" />
+          </td>
+          <td colspan="1">
+            <input type="text" name="state" id="state" />
+          </td>
+          <td colspan="1">
+            <input type="zip" id="zip" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <label for="city">City</label>
+          </td>
+          <td colspan="1">
+            <label for="state">State</label>
+          </td>
+          <td colspan="1">
+            <label for="zip">Zip</label>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="1">
+            <label>Suscribe For:</label>
+          </td>
+          <td colspan="1">
+            <input type="radio" name="year" id="1year" />
+            <label for="1year">1 year ($19.95)</label>
+          </td>
+          <td colspan="1">
+            <input type="radio" name="year" id="2year" />
+            <label for="2year">2 year ($35.00)</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Send more information about:</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="info" id="info1" />
+            <label for="info1">Computer Zine</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="info" id="info2" />
+            <label for="info2">Fishing Zine</label>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" name="info" id="info3" />
+            <label for="info3">Cat-O-Zine</label>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
 
 
 
