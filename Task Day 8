@@ -1,0 +1,43 @@
+1. Solving problems using array functions on rest countries data.
+
+a) Get all the countries from Asia continent /region using Filter function.
+
+Answer:
+const XMLHttpRequest = require("xhr2"); //XMLHttpRequest is a built-in object in web browsers, Using this line to execute it in Node.js
+const getAllCountriesInfo = new XMLHttpRequest();
+getAllCountriesInfo.open("GET", "https://restcountries.com/v2/all");
+getAllCountriesInfo.send();
+getAllCountriesInfo.onload = function () {
+  const countryData = JSON.parse(getAllCountriesInfo.response).filter(function (
+    country
+  ) {
+    if (country.region === "Asia") {
+      return country;
+    }
+  });
+  console.log(countryData);
+};
+
+
+b) Get all the countries with a population of less than 2 lakhs using Filter function.
+
+Answer:
+const XMLHttpRequest = require("xhr2"); //XMLHttpRequest is a built-in object in web browsers, Using this line to execute it in Node.js
+const getAllCountriesInfo = new XMLHttpRequest();
+getAllCountriesInfo.open("GET", "https://restcountries.com/v2/all");
+getAllCountriesInfo.send();
+getAllCountriesInfo.onload = function () {
+  const countryData = JSON.parse(getAllCountriesInfo.response).filter(function (
+    country
+  ) {
+    if (country.population <= 200000) {
+      return country;
+    }
+  });
+  console.log(countryData);
+};
+
+
+c) Print the following details name, capital, flag using forEach function.
+
+Answer:
