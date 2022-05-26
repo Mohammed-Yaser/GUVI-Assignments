@@ -55,3 +55,51 @@ getAllCountriesInfo.onload = function () {
     }
   );
 };
+
+
+
+c) Print the total population of countries using reduce function
+
+Answer:
+const XMLHttpRequest = require("xhr2"); //XMLHttpRequest is a built-in object in web browsers, Using this line to execute it in Node.js
+const getAllCountriesInfo = new XMLHttpRequest();
+getAllCountriesInfo.open("GET", "https://restcountries.com/v2/all");
+getAllCountriesInfo.send();
+getAllCountriesInfo.onload = function () {
+  const countryData = JSON.parse(getAllCountriesInfo.response).reduce(function (
+    accumulator,
+    country
+  ) {
+    accumulator = accumulator + country.population;
+    return accumulator;
+  },
+  0);
+  console.log(`Total world population = ${countryData}`);
+};
+
+
+
+d) Print the country which uses US Dollars as currency.
+
+Answer:
+const XMLHttpRequest = require("xhr2"); //XMLHttpRequest is a built-in object in web browsers, Using this line to execute it in Node.js
+const getAllCountriesInfo = new XMLHttpRequest();
+getAllCountriesInfo.open("GET", "https://restcountries.com/v2/all");
+getAllCountriesInfo.send();
+getAllCountriesInfo.onload = function () {
+  const countryData = JSON.parse(getAllCountriesInfo.response).filter(function (
+    country
+  ) {
+    let [thisCurrency] = country.currencies || [];
+    let {
+      code: currencyCode,
+      name: currencyName,
+      symbol: currencySymbol,
+    } = thisCurrency || {};
+    if (currencyCode === "USD") {
+      console.log(country.name);
+      return country;
+    }
+  });
+};
+
