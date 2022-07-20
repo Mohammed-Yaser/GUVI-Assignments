@@ -1,0 +1,15 @@
+body {
+  background-image: url("https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77701699026.jpg");
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+#memeImage {
+  max-height: 65%;
+  max-width: 65%;
+  margin-top: 5%;
+}
